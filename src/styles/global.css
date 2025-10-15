@@ -1,0 +1,79 @@
+/* ================================
+   GLOBAL THEME STYLES – fungery
+   ================================ */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;500&display=swap');
+
+/* Reset & Grundverhalten */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lexend Deca", sans-serif;
+  scroll-behavior: smooth;
+  color: rgb(255, 244, 216); /* beige1 */
+  background-color: rgb(106, 99, 169); /* lila1 (Fallback) */
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Bilder */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: none;
+  box-shadow: none; /* keine Schatten */
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Mail-Link (wird auch für fermentier.bar genutzt) */
+.mail-link,
+a[target="_blank"] {
+  color: rgb(106, 99, 169); /* lila1 */
+  text-decoration: underline;
+}
+
+.mail-link:hover,
+a[target="_blank"]:hover {
+  color: rgb(89, 62, 142); /* lila2 */
+}
+a {
+  color: rgb(235, 92, 143); /* sanftes Rosa-Lila */
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+a:hover {
+  color: rgb(244, 234, 207); /* beige2 */
+  border-color: rgb(244, 234, 207);
+}
+
+.mail-link {
+  color: rgb(235, 92, 143);
+}
+
+.mail-link:hover {
+  color: rgb(244, 234, 207);
+}
+/* Einheitlicher Stil für sichtbare Textlinks im Fließtext */
+a:not(.mail-link) {
+  color: rgb(242, 194, 209); /* rosa1 */
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+a:not(.mail-link):hover {
+  color: rgb(235, 92, 143); /* rosa2 */
+  border-color: rgb(235, 92, 143);
+}

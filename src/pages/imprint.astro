@@ -1,0 +1,103 @@
+---
+import "/src/styles/global.css";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imprint — Fungery</title>
+    <!-- Favicon für verschiedene Größen -->
+<link rel="icon" type="image/png" sizes="16x16" href="/fungery_favicon_16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/fungery_favicon_32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/fungery_favicon_48.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/fungery_favicon_64.png">
+
+
+    <style>
+      /* sorgt dafür, dass diese Seite sich exakt wie "Legal" verhält */
+      main.legal-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+        text-align: left;
+      }
+
+      .top-logo {
+        position: fixed;
+        top: 1rem;
+        right: 1.5rem;
+        width: 80px;
+        height: auto;
+        cursor: pointer;
+        z-index: 1000;
+        border: none;
+        box-shadow: none;
+      }
+
+      footer.footer {
+        text-align: center;
+        padding: 2rem 0;
+        font-size: 0.9rem;
+      }
+
+      footer.footer a {
+        color: var(--rosa1);
+        text-decoration: none;
+        margin: 0 0.3rem;
+        transition: color 0.3s ease;
+      }
+
+      footer.footer a:hover {
+        color: var(--beige2);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Kleines Logo oben rechts führt zum Start -->
+    <a href="/#start">
+      <img src="/images/logo2.png" alt="fungery logo klein" class="top-logo" />
+    </a>
+
+    <main class="legal-container">
+      <h1>Imprint</h1>
+
+      <section>
+        <p>
+          <strong>Chris Freudenberger</strong><br />
+          Dreihäusle 3<br />
+          78112 St. Georgen im Schwarzwald<br />
+          Germany
+        </p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p>Email: <span id="mail-container"></span></p>
+      </section>
+
+      <section>
+        <p>
+          Website © by fungery<br />
+          CI and Logotype by Chris Schnerr<br />
+          Typeface: Lexend, licensed under the SIL Open Font License 1.1<br />
+          
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a href="/#start">Home</a> |
+      <a href="/legal">Legal</a>
+    </footer>
+
+    <!-- Mail-Adresse vor Bot-Scraping geschützt -->
+    <script>
+      const user = "mail";
+      const domain = "fungery.com";
+      const container = document.getElementById("mail-container");
+      container.innerHTML = `<a href="mailto:${user}@${domain}" class="mail-link">${user}@${domain}</a>`;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,298 @@
+---
+---
+<!--
+  Onepage-Design für fungery
+-->
+
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fungery</title>
+
+    <!-- SEO Basic -->
+<title>fungery — agency for fungal x human relations</title>
+<meta name="description" content="The Fungery shares mushroom knowledge through sensory and hands-on learning, brings people together, and provides temporary infrastructure for that purpose." />
+<meta name="keywords" content="fungi, design, art, food, workshops, fermentation, sustainability, knowledge sharing, mycelium" />
+
+<!-- Open Graph / Social Sharing -->
+<meta property="og:title" content="fungery — agency for fungal x human relations" />
+<meta property="og:description" content="Exploring human-fungal relations through sensory and collaborative formats." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://fungery.com" />
+<meta property="og:image" content="/images/social-preview.jpg" />
+<meta property="og:site_name" content="fungery" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="fungery — agency for fungal x human relations" />
+<meta name="twitter:description" content="Exploring human-fungal relations through sensory and collaborative formats." />
+<meta name="twitter:image" content="/images/social-preview.jpg" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="/fungery_favicon_32.png" />
+<link rel="icon" type="image/png" sizes="64x64" href="/fungery_favicon_64.png" />
+
+
+    <!-- Globale Styles (Farben, Schrift, Basisformatierung) -->
+    <link rel="stylesheet" href="/src/styles/global.css">
+
+    <!-- Favicon für verschiedene Größen -->
+<link rel="icon" type="image/png" sizes="16x16" href="/fungery_favicon_16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/fungery_favicon_32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/fungery_favicon_48.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/fungery_favicon_64.png">
+
+
+    <!-- Seitenindividuelle Styles (Layout, Positionierung, Abstände etc.) -->
+    <style>
+      :root {
+        --beige1: rgb(255, 244, 216);
+        --beige2: rgb(244, 234, 207);
+        --lila1: rgb(106, 99, 169);
+        --lila2: rgb(89, 62, 142);
+      }
+
+      /* Grundstruktur */
+      body {
+        margin: 0;
+        scroll-behavior: smooth;
+        background-color: var(--lila1);
+        color: var(--beige1);
+      }
+
+      main {
+        margin-left: 200px; /* Platz für Navigation */
+      }
+
+      section {
+        padding: 4rem 2rem;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      /* ------------------- Navigation ------------------- */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        z-index: 1000;
+      }
+
+      nav a {
+        color: var(--beige1);
+        text-decoration: none;
+        margin: 1rem 0;
+        font-size: 1.2rem;
+        transition: color 0.2s ease;
+      }
+
+      nav a:hover {
+        color: var(--beige2);
+      }
+
+      /* Logo oben rechts führt zum Start */
+      .top-logo {
+        position: fixed;
+        top: 1rem;
+        right: 1.5rem;
+        width: 80px;
+        height: auto;
+        cursor: pointer;
+        border: none;
+        box-shadow: none; /* kein Schatten */
+        z-index: 1100;
+      }
+
+      /* ------------------- Start ------------------- */
+      #start {
+        background-color: var(--beige1);
+        color: var(--lila1);
+      }
+
+      #start img {
+        max-width: 1000px;
+        width: 100%;
+        height: auto;
+        box-shadow: none; /* kein Schatten */
+      }
+
+      /* ------------------- About ------------------- */
+      #about {
+        background-color: var(--lila1);
+      }
+
+      #about .textblock,
+      #about .textblock-small {
+        max-width: 700px;
+        margin: 2rem auto;
+      }
+
+      #about .image {
+        max-width: 700px;
+        margin: 1rem auto;
+      }
+
+      .caption {
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+        color: var(--beige2);
+      }
+
+      /* ------------------- Workshops & Food ------------------- */
+      .grid-4 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        max-width: 1000px;
+        margin: 2rem auto;
+      }
+
+      .grid-4 img {
+        width: 100%;
+        height: auto;
+      }
+
+      .photo-footer {
+        margin-top: -1.5rem;
+        font-size: 0.8rem;
+        color: var(--beige2);
+      }
+
+      #workshops p,
+      #food p {
+        max-width: 700px;
+        margin: 2rem auto;
+      }
+
+      /* ------------------- Kontakt ------------------- */
+      #contact {
+        background-color: var(--lila1);
+      }
+
+      /* ------------------- Footer ------------------- */
+      footer {
+        background-color: transparent;
+        text-align: center;
+        padding: 1rem;
+        font-size: 0.9rem;
+      }
+
+      footer a {
+        color: var(--beige1);
+        text-decoration: none;
+        margin: 0 0.5rem;
+        transition: color 0.2s ease;
+      }
+
+      footer a:hover {
+        color: var(--beige2);
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <!-- Logo oben rechts führt zum Start -->
+    <a href="#start"><img src="/images/logo2.png" alt="fungery logo klein" class="top-logo" /></a>
+
+    <!-- Navigation -->
+    <nav>
+      <a href="#about">About</a>
+      <a href="#workshops">Workshops</a>
+      <a href="#food">Food</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+      <!-- Start -->
+      <section id="start">
+        <img src="/images/logo1.png" alt="fungery logo groß" />
+      </section>
+
+      <!-- About -->
+      <section id="about">
+        <div class="image">
+          <img src="/images/about.jpg" alt="fungery about" />
+          <div class="caption">Photo: Lucas Melzer</div>
+        </div>
+
+        <h2>agency for fungal x human relations</h2>
+
+        <div class="textblock">
+The Fungery platform shares mushroom knowledge through sensory and hands‑on learning, brings people together, and provides temporary infrastructure for that purpose. Using fungi’s collaborative traits as a model, it invites participation from current and future mushroom enthusiasts. In doing so it creates a network of diverse actors that, like fungal mycelium, connects different organisms.        </div>
+
+        <div class="image">
+          <img src="/images/about2.jpg" alt="fungery about2" />
+          <div class="caption">Photo: Isabel Hemberger</div>
+        </div>
+
+        <div class="textblock-small">
+The temporary infrastructure consists of twelve stools, four tables, and a work table on casters. Visually and conceptually, the elements create a space that can be flexible and location-independent.        </div>
+      </section>
+
+      <!-- Workshops -->
+      <section id="workshops">
+        <h2>Workshops</h2>
+        <div class="grid-4">
+          <img src="/images/ws1.jpg" alt="workshop 1" />
+          <img src="/images/ws2.jpg" alt="workshop 2" />
+          <img src="/images/ws3.jpg" alt="workshop 3" />
+          <img src="/images/ws4.jpg" alt="workshop 4" />
+        </div>
+        <div class="photo-footer">Photos: Isabel Hemberger</div>
+
+        <p>How can knowledge about mushrooms be shared? The fungery provides a flexible environment that can be set up anywhere. Using various tools and teaching concepts, the fungery explores how mushrooms can enrich the diversity of our diet and contribute to a more sustainable food culture. Here is a workshop on making tempeh. 
+        </p>
+      </section>
+
+      <!-- Food -->
+      <section id="food">
+        <h2>Food</h2>
+        <div class="grid-4">
+          <img src="/images/food1.jpg" alt="food 1" />
+          <img src="/images/food2.jpg" alt="food 2" />
+          <img src="/images/food3.jpg" alt="food 3" />
+          <img src="/images/food4.jpg" alt="food 4" />
+        </div>
+        <div class="photo-footer">Photos: kimchipowder</div>
+
+        <p>
+          Tastings and samplings as a tool for sensory experiences and exchange. The mushroom dinner from left to right: Hot Radishes, Tempeh Burger, Vanilla Shiitake Ice Cream, Umami Martini. Together with the 
+          <a href="https://www.fermentierbar.de/" target="_blank" rel="noopener noreferrer">fermentier.bar</a>.
+        </p>
+      </section>
+
+      <!-- Kontakt -->
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>For inquiries and collaborations:</p>
+        <p id="mail-container"></p>
+
+        <script>
+          const user = "mail";
+          const domain = "fungery.com";
+          const container = document.getElementById("mail-container");
+          container.innerHTML = `<a href="mailto:${user}@${domain}" class="mail-link">${user}@${domain}</a>`;
+        </script>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <a href="/imprint">Imprint</a> |
+        <a href="/legal">Legal</a>
+      </footer>
+    </main>
+  </body>
+</html>
