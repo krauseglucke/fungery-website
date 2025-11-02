@@ -76,32 +76,43 @@ import "/src/styles/global.css";
         text-align: center;
       }
 
-      /* ------------------- Navigation ------------------- */
-      nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        width: 200px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: transparent;
-        z-index: 1000;
-      }
+    /* Desktop Navigation fixiert links */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  z-index: 1000;
+}
 
-      nav a {
-        color: var(--beige1);
-        text-decoration: none;
-        margin: 1rem 0;
-        font-size: 1.2rem;
-        transition: color 0.2s ease;
-      }
+nav a {
+  color: var(--beige1);
+  text-decoration: none;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  transition: color 0.2s ease;
+}
 
-      nav a:hover {
-        color: var(--beige2);
-      }
+nav a:hover {
+  color: var(--beige2);
+}
+
+/* Auf mobilen Geräten Navigation ausblenden */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  main {
+    margin-left: 0;
+  }
+}
+
 
       /* Logo oben rechts führt zum Start */
       .top-logo {
@@ -210,11 +221,13 @@ import "/src/styles/global.css";
 
     <!-- Navigation -->
     <nav>
-      <a href="#about">About</a>
-      <a href="#workshops">Workshops</a>
-      <a href="#food">Food</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <a href="#about">About</a>
+  <a href="#sharing">Sharing</a>
+  <a href="#fooddesign">Food Design</a>
+  <a href="#space">Space</a>
+  <a href="#contact">Contact</a>
+</nav>
+
 
     <main>
       <!-- Start -->
@@ -224,55 +237,76 @@ import "/src/styles/global.css";
 
       <!-- About -->
       <section id="about">
-        <div class="image">
-          <img src="/images/about.jpg" alt="fungery about" />
-          <div class="caption">Photo: Lucas Melzer</div>
+     
         </div>
 
-        <h2>agency for fungal x human relations</h2>
+        <h2>About</h2>
 
-        <div class="textblock">
-The Fungery platform shares mushroom knowledge through sensory and hands‑on learning, brings people together, and provides temporary infrastructure for that purpose. Using fungi’s collaborative traits as a model, it invites participation from current and future mushroom enthusiasts. In doing so it creates a network of diverse actors that, like fungal mycelium, connects different organisms.        </div>
+        <div class="section-textblock">
+The 'Fungery - agency for fungal x human relations' shares mushroom knowledge through sensory and hands‑on learning, brings people together, and provides temporary infrastructure for that purpose. Using fungi’s collaborative traits as a model, it invites participation from current and future mushroom enthusiasts. In doing so it creates a network of diverse actors that, like fungal mycelium, connects different organisms.        </div>
 
-        <div class="image">
-          <img src="/images/about2.jpg" alt="fungery about2" />
+        <div class="section-image">
+          <img src="/images/about.jpg" alt="fungery about" class="rounded" />
           <div class="caption">Photo: Isabel Hemberger</div>
         </div>
 
-        <div class="textblock-small">
-The temporary infrastructure consists of twelve stools, four tables, and a work table on casters. Visually and conceptually, the elements create a space that can be flexible and location-independent.        </div>
+        <div class="section-textblock">
+How can knowledge about mushrooms be shared? The fungery provides a flexible environment that can be set up anywhere. Using various tools and teaching concepts, the fungery explores how mushrooms can enrich the diversity of our diet and contribute to a more sustainable food culture.       </div>
       </section>
 
-      <!-- Workshops -->
-      <section id="workshops">
+      <!-- Sharing -->
+      <section id="sharing">
+        <h2>Sharing</h2>
         <h2>Workshops</h2>
-        <div class="grid-4">
-          <img src="/images/ws1.jpg" alt="workshop 1" />
-          <img src="/images/ws2.jpg" alt="workshop 2" />
-          <img src="/images/ws3.jpg" alt="workshop 3" />
-          <img src="/images/ws4.jpg" alt="workshop 4" />
-        </div>
-        <div class="photo-footer">Photos: Isabel Hemberger</div>
-
-        <p>How can knowledge about mushrooms be shared? The fungery provides a flexible environment that can be set up anywhere. Using various tools and teaching concepts, the fungery explores how mushrooms can enrich the diversity of our diet and contribute to a more sustainable food culture. Here is a workshop on making tempeh. 
+         <div class="section-image">
+          <img src="/images/workshop1.jpg" alt="workshop" class="rounded" />
+          <div class="caption">Photo: fungery</div>
+        <div class="section-textblock">
+        <p>The fungery workshops provide short, practical sessions where participants collaboratively learn and apply techniques related to fungi and nutrition. 
         </p>
-      </section>
+      </div>
 
-      <!-- Food -->
-      <section id="food">
-        <h2>Food</h2>
-        <div class="grid-4">
-          <img src="/images/food1.jpg" alt="food 1" />
-          <img src="/images/food2.jpg" alt="food 2" />
-          <img src="/images/food3.jpg" alt="food 3" />
-          <img src="/images/food4.jpg" alt="food 4" />
-        </div>
-        <div class="photo-footer">Photos: kimchipowder</div>
-
-        <p>
-          Tastings and samplings as a tool for sensory experiences and exchange. The mushroom dinner from left to right: Hot Radishes, Tempeh Burger, Vanilla Shiitake Ice Cream, Umami Martini. Together with the 
+        <h2>Tastings</h2>
+         <div class="section-image">
+          <img src="/images/tasting1.jpg" alt="tasting" class="rounded" />
+          <div class="caption">Photo: kimchipowder</div>
+        <div class="section-textblock">
+        <p>Tastings and samplings as a tool for sensory experiences and exchange. Together with the 
           <a href="https://www.fermentierbar.de/" target="_blank" rel="noopener noreferrer">fermentier.bar</a>.
         </p>
+      </div>
+      </section>
+
+       <!-- Food Design -->
+      <section id="fooddesign">
+     
+        </div>
+
+        <h2>Food Design</h2>
+ <div class="section-image">
+          <img src="/images/fd1.jpg" alt="tempeh burger patty" class="rounded" />
+          <div class="caption">Photo: fungery</div>
+        </div>
+        <div class="section-textblock">
+Tempeh buckwheat burger patty, 2024.
+The recipe and a mold were developed so the tempeh mycelium shapes the patty and optimizes bite texture. A wavy surface on top and bottom increases surface area, producing a crisp crust when fried. 
+           </div>
+      </section>
+
+      <!-- Space -->
+      <section id="space">
+     
+        </div>
+
+        <h2>Space</h2>
+        <div class="section-image">
+          <img src="/images/space.jpg" alt="fungery space" class="rounded" />
+          <div class="caption">Photo: Lucas Melzer</div>
+        </div>
+
+        <div class="section-textblock">
+The temporary infrastructure consists of twelve stools, four tables, and a work table on casters. Visually and conceptually, the elements create a space that can be flexible and location-independent.        
+           </div>
       </section>
 
       <!-- Kontakt -->

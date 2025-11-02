@@ -1,6 +1,4 @@
-/* ================================
-   GLOBAL THEME STYLES – fungery
-   ================================ */
+/* GLOBAL THEME STYLES – fungery ================================ */
 
 /* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;500&display=swap');
@@ -76,4 +74,31 @@ a:not(.mail-link) {
 a:not(.mail-link):hover {
   color: rgb(235, 92, 143); /* rosa2 */
   border-color: rgb(235, 92, 143);
+}
+/* Allgemeine Section-Bilder */
+.section-image {
+  max-width: 700px;
+  margin: 1rem auto;
+}
+
+.section-textblock {
+  max-width: 700px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.section-textblock-small {
+  max-width: 700px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.caption {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  color: var(--beige2);
+}
+/* Nur Bilder mit Klasse "rounded" */
+img.rounded {
+  border-radius: 24px;
 }
